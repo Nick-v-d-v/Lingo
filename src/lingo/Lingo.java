@@ -6,10 +6,10 @@ public class Lingo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String[] woorden = {"appel", "stoel", "plant", "broek", "kaars", "regen", "piano", "kaart", "fiets", "snoep"};
+        List<String> woorden = new ArrayList<>(Arrays.asList("appel", "stoel", "plant", "broek", "kaars", "regen", "piano", "kaart", "fiets", "snoep"));
         
         Random random = new Random();
-        String geheimWoord = woorden[random.nextInt(woorden.length)];
+        String geheimWoord = woorden.get(random.nextInt(woorden.size()));
 
         System.out.println("Je hebt 5 pogingen om het woord te raden.");
         System.out.println("Correct = juiste plek, Deels correct = verkeerde plek, - = niet in het woord");
@@ -39,12 +39,12 @@ public class Lingo {
             }
 
             if (lettersGoed == 5) {
-                System.out.println("Je hebt gewonnen! Het geheime woord was: " + geheimWoord);
+                System.out.println("You win");
                 break;
             }
 
             if (poging == 5) {
-                System.out.println("Je hebt verloren! Het geheime woord was: " + geheimWoord);
+                System.out.println("You lost Het woord was: " + geheimWoord);
             }
         }
 
