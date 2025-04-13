@@ -3,6 +3,7 @@ package lingo;
 import java.util.*;
 
 public class Lingo {
+	
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
