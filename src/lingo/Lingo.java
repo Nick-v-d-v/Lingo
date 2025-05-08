@@ -22,7 +22,7 @@ public class Lingo {
 
             if (gok.length() != 5) {
                 System.out.println("Gebruik precies 5 letters.");
-            }
+            } else {
 
             int lettersGoed = 0;
 
@@ -46,6 +46,7 @@ public class Lingo {
 
             if (poging == 5) {
                 System.out.println("You lost Het woord was: " + geheimWoord);
+            	}
             }
         }
 
